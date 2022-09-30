@@ -13,9 +13,12 @@ This check could be used as a service during a registration form, for example, m
 use PwnedPassCheck\Service\PwnedPasswordCheckerService;
 
 class fooClass(){
-    public function checkIfPasswordHasBeenPowned(): bool {
+    public function checkIfPasswordHasBeenPowned(): string {
           $pownedPassChecker = new PwnedPasswordCheckerService();
-          return pownedPassChecker->hasPowned($password);
+          if(pownedPassChecker->hasPowned($password)){
+            return json_encode(["powned" => true, "msg"=> "Your password has been powned and is unsafe"]);
+          }
+          return return json_encode(["powned" => false, "msg"=> "Your password was not been powned"]);
     }
 }
 
