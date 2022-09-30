@@ -2,7 +2,7 @@
 Easy to use PHP Implementation of the free API haveibeenpwned.com
 
 ```bash
-composer require snipershady/pwnedpasscheck
+composer require snipershady/pwned-password-check
 ```
 
 ## Context
