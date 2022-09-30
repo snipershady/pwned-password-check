@@ -1,0 +1,36 @@
+{
+    "name": "snipershady/pwned-password-check",
+    "description": "Easy to use PHP Implementation of the free API haveibeenpwned.com",
+    "keywords": ["pwned", "password", "haveibeenpwned.com"],
+    "homepage": "https://www.spinfo.it",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Stefano Perrini",
+            "email": "perrini.stefano@gmail.com",
+            "homepage": "https://www.spinfo.it"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PwnedPassCheck\\": "src/"
+        }       
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PwnedPassCheck\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.8"
+    }
+}
